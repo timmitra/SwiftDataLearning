@@ -10,10 +10,21 @@ import SwiftData
 
 @main
 struct SwiftDataLearningApp: App {
+  
+  let container: ModelContainer
+  
+  init() {
+    do {
+      container = try ModelContainer(for: Video.self, Keyword.self, migrationPlan: nil)
+    } catch {
+      fatalError("Failed to initialize the model container")
+    }
+  }
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Video.self)
+        .modelContainer(container)
     }
 }
