@@ -23,7 +23,7 @@ struct SwiftDataLearningApp: App {
   
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VideosView()
         }
         .modelContainer(container)
     }
