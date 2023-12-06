@@ -13,6 +13,7 @@
 		2A23AE522B201E6300FEB9B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A23AE512B201E6300FEB9B4 /* Preview Assets.xcassets */; };
 		2A23AE5D2B201FEA00FEB9B4 /* ModelSchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23AE5C2B201FEA00FEB9B4 /* ModelSchemaV1.swift */; };
 		2A23AE5F2B20218600FEB9B4 /* SwiftData+TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23AE5E2B20218600FEB9B4 /* SwiftData+TypeAliases.swift */; };
+		2A23AE612B2023AD00FEB9B4 /* EditVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23AE602B2023AD00FEB9B4 /* EditVideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2A23AE512B201E6300FEB9B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A23AE5C2B201FEA00FEB9B4 /* ModelSchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSchemaV1.swift; sourceTree = "<group>"; };
 		2A23AE5E2B20218600FEB9B4 /* SwiftData+TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftData+TypeAliases.swift"; sourceTree = "<group>"; };
+		2A23AE602B2023AD00FEB9B4 /* EditVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2A23AE4E2B201E6300FEB9B4 /* Assets.xcassets */,
 				2A23AE502B201E6300FEB9B4 /* Preview Content */,
 				2A23AE5E2B20218600FEB9B4 /* SwiftData+TypeAliases.swift */,
+				2A23AE602B2023AD00FEB9B4 /* EditVideoView.swift */,
 			);
 			path = SwiftDataLearning;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				2A23AE5F2B20218600FEB9B4 /* SwiftData+TypeAliases.swift in Sources */,
 				2A23AE4D2B201E6000FEB9B4 /* ContentView.swift in Sources */,
 				2A23AE4B2B201E6000FEB9B4 /* SwiftDataLearningApp.swift in Sources */,
+				2A23AE612B2023AD00FEB9B4 /* EditVideoView.swift in Sources */,
 				2A23AE5D2B201FEA00FEB9B4 /* ModelSchemaV1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

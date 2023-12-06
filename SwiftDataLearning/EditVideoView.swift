@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct EditVideoView: View {
+  
+  @Binding var video: Video
+  @State private var newKeywordName = ""
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      Form {
+        TextField("Title:", text: $video.title)
+        DatePicker("Date", selection: $video.date)
+        
+        Section("Keywords") {
+          ForEach(video.keywords) { keyword in
+            Text(keyword.title)
+          }
+          
+          HStack {
+            TextField("Add a new keyword for \(video.title)", text: $newKeywordName)
+            Button("Add", action: addKeyword)
+          }
+        }
+      }
+      .navigationTitle("Edit Video")
+      .navigationBarTitleDisplayMode(.inline)
     }
+  
+  func addKeyword() {
+    guard newKeywordName.isEmpty == false else { return }
+     
+    withAnimation {
+      let keyword = Keyword(title: newKeywordName)
+      video.keywords.append(keyword)
+      newKeywordName = ""
+    }
+  }
 }
 
-#Preview {
-    EditVideoView()
-}
+//#Preview {
+//    EditVideoView()
+//}
