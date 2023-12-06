@@ -20,10 +20,12 @@ enum ModelSchemaV1: VersionedSchema {
   class Video {
     var title: String
     var date: Date
+    @Relationship(deleteRule: .cascade) var keywords: [Keyword]
     
     init(title: String = "") {
       self.title = title
       self.date = .now
+      self.keywords = []
     }
   }
   
