@@ -37,6 +37,7 @@ struct VideoListView: View {
           .foregroundStyle(.secondary)
       }
       .padding(.horizontal)
+      .frame(maxWidth: .infinity, alignment: .leading)
       
       ScrollView(.horizontal, showsIndicators: false) {
         LazyHStack(spacing: 0) {
