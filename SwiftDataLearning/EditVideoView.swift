@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditVideoView: View {
   
-  @Binding var video: Video
+  @Bindable var video: Video // bidirectional data flow
   @State private var newKeywordName = ""
   
     var body: some View {
