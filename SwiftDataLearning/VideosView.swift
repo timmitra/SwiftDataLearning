@@ -38,5 +38,10 @@ struct VideosView: View {
 }
 
 #Preview {
+  let preview = Preview(Video.self)
+  preview.addExamples(Video.sampleVideos)
+  return NavigationStack {
     VideosView()
+      .modelContainer(preview.container)
+  }
 }
