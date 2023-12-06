@@ -12,12 +12,17 @@ struct VideosView: View {
   
   @Environment(\.modelContext) private var modelContext
   @State private var selectedVideo: Video?
-  
+  @State private var deletedVideo: Video?
+
     var body: some View {
       NavigationStack {
-        VideoListView(selectedVideo: $selectedVideo)
+        VideoListView(selectedVideo: $selectedVideo, deletedVideo: $deletedVideo)
           .toolbar{
             Button("Add Video", systemImage: "plus", action: addVideo)
+          }
+          .onChange(of: deletedVideo) {_, newValue in
+            guard let video = newValue else { return }
+            delete(video)
           }
         }
     }
@@ -25,6 +30,10 @@ struct VideosView: View {
     let video = Video()
     selectedVideo = video
     modelContext.insert(video)
+  }
+  
+  func delete(_ video: Video) {
+    modelContext.delete(video)
   }
 }
 

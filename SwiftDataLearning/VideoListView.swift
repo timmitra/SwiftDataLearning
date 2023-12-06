@@ -12,6 +12,7 @@ struct VideoListView: View {
   
   @Query var videos: [Video]
   @Binding var selectedVideo: Video?
+  @Binding var deletedVideo: Video?
   
     var body: some View {
         List {
@@ -19,6 +20,7 @@ struct VideoListView: View {
             cell(video)
               .listRowInsets(.init(top: 12, leading: 0, bottom: 12, trailing: 0))
           }
+          .onDelete (perform: delete(_:))
         }
         .sheet(item: $selectedVideo) { video in
           NavigationStack {
@@ -27,6 +29,13 @@ struct VideoListView: View {
         }
         .padding()
     }
+  
+  func delete (_ indexSet: IndexSet) {
+    for index in indexSet {
+      let video = videos[index]
+      deletedVideo = video
+    }
+  }
   
   func cell(_ video: Video) -> some View {
     VStack {
@@ -54,6 +63,9 @@ struct VideoListView: View {
               .padding(.horizontal, 4)
           }
         }
+      }
+      .onTapGesture {
+        selectedVideo = video
       }
     }
   }
