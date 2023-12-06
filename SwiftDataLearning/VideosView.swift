@@ -14,9 +14,11 @@ struct VideosView: View {
   @State private var selectedVideo: Video?
   
     var body: some View {
-      VideoListView(selectedVideo: $selectedVideo)
-        .toolbar{
-          Button("Add Video", systemImage: "plus", action: addVideo)
+      NavigationStack {
+        VideoListView(selectedVideo: $selectedVideo)
+          .toolbar{
+            Button("Add Video", systemImage: "plus", action: addVideo)
+          }
         }
     }
   func addVideo() {
