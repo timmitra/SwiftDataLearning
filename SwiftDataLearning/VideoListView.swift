@@ -14,6 +14,13 @@ struct VideoListView: View {
   @Binding var selectedVideo: Video?
   @Binding var deletedVideo: Video?
   
+  init(sortDescriptor: SortDescriptor<Video>, selectedVideo: Binding<Video?>, deletedVideo: Binding<Video?>) {
+    // underscore accesses the video Query
+    _videos = Query(sort: [sortDescriptor])
+    _selectedVideo = selectedVideo
+    _deletedVideo = deletedVideo
+  }
+  
     var body: some View {
         List {
           ForEach(videos) { video in
@@ -72,5 +79,10 @@ struct VideoListView: View {
 }
 
 //#Preview {
-//    VideoListView()
+//  let preview = Preview(Video.self)
+//  preview.addExamples(Video.sampleVideos)
+//  return NavigationStack {
+//    VideoListView(selectedVideo: Video.sampleVideos[0], deletedVideo: Video.sampleVideos[0])
+//  }
+//  .modelContainer(preview.container)
 //}
