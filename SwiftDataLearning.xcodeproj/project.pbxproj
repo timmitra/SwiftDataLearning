@@ -17,6 +17,7 @@
 		2A23AE632B202AAC00FEB9B4 /* VideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23AE622B202AAC00FEB9B4 /* VideosView.swift */; };
 		2A40BEDF2B20DEA20033F95E /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BEDE2B20DEA20033F95E /* PreviewContainer.swift */; };
 		2A40BEE12B20DEC00033F95E /* VideoExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BEE02B20DEC00033F95E /* VideoExamples.swift */; };
+		2A40BEE32B20E2DA0033F95E /* KeywordExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BEE22B20E2DA0033F95E /* KeywordExamples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2A23AE622B202AAC00FEB9B4 /* VideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosView.swift; sourceTree = "<group>"; };
 		2A40BEDE2B20DEA20033F95E /* PreviewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		2A40BEE02B20DEC00033F95E /* VideoExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoExamples.swift; sourceTree = "<group>"; };
+		2A40BEE22B20E2DA0033F95E /* KeywordExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordExamples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				2A40BEDE2B20DEA20033F95E /* PreviewContainer.swift */,
 				2A40BEE02B20DEC00033F95E /* VideoExamples.swift */,
+				2A40BEE22B20E2DA0033F95E /* KeywordExamples.swift */,
 			);
 			path = "Preview Support";
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				2A23AE632B202AAC00FEB9B4 /* VideosView.swift in Sources */,
 				2A23AE4B2B201E6000FEB9B4 /* SwiftDataLearningApp.swift in Sources */,
 				2A40BEE12B20DEC00033F95E /* VideoExamples.swift in Sources */,
+				2A40BEE32B20E2DA0033F95E /* KeywordExamples.swift in Sources */,
 				2A23AE612B2023AD00FEB9B4 /* EditVideoView.swift in Sources */,
 				2A40BEDF2B20DEA20033F95E /* PreviewContainer.swift in Sources */,
 				2A23AE5D2B201FEA00FEB9B4 /* ModelSchemaV1.swift in Sources */,
