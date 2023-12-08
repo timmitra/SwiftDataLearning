@@ -14,9 +14,15 @@ struct VideoListView: View {
   @Binding var selectedVideo: Video?
   @Binding var deletedVideo: Video?
   
-  init(sortDescriptor: SortDescriptor<Video>, selectedVideo: Binding<Video?>, deletedVideo: Binding<Video?>) {
+  init(sortDescriptor: SortDescriptor<Video>, searchText: String, selectedVideo: Binding<Video?>, deletedVideo: Binding<Video?>) {
     // underscore accesses the video Query
-    _videos = Query(sort: [sortDescriptor])
+    _videos = Query(filter: #Predicate{
+      if searchText.isEmpty {
+        return true
+      } else {
+        return $0.title.localizedStandardContains(searchText) // case insensiotive
+      }
+    }, sort: [sortDescriptor])
     _selectedVideo = selectedVideo
     _deletedVideo = deletedVideo
   }
